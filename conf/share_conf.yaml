@@ -1,0 +1,19 @@
+training_stage: shared
+
+training_param:
+  batch_size : 512
+  learning_rate : 0.0008
+  device: cuda
+  epochs: 400
+
+
+model_param:
+  img_size : 64
+  channels : 3
+  shared_dim : 32
+  switched : True
+
+loss_param:
+  local_mutual_loss_coeff: 1.0
+  global_mutual_loss_coeff: 0.5
+  shared_loss_coeff : 0

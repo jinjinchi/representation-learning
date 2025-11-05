@@ -34,7 +34,7 @@ conf_path="conf/exclusive_conf.yaml"
 trained_enc_x_path="mlruns/3/38e65dbd8d1246fab33f079e16510019/artifacts/sh_encoder_x/state_dict.pth"
 trained_enc_y_path="mlruns/3/38e65dbd8d1246fab33f079e16510019/artifacts/sh_encoder_y/state_dict.pth"
 ```
-* data_base_folder : Is the folder where the raw mnist data is hosted. By default this folder is called "data" and the data is downloaded the first time this file is run.
+* data_base_folder : Is the folder where the the Card dataset is located. By default this folder is called "data" and the data is downloaded the first time this file is run.
 
 * xp_name : Mlflow experimentation name.
 

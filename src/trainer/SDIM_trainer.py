@@ -54,7 +54,6 @@ class SDIMTrainer:
             device (str): Device among cuda/cpu
         """
         self.dataset_train = dataset_train
-        self.dataset_test = dataset_test
         self.model = model.to(device)
 
         self.loss = loss

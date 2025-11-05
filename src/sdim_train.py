@@ -56,7 +56,6 @@ def run(
 
     # Load data
     dataset_path_train = os.path.join(data_base_folder, 'Card_pair_dataset_train_no_outlier.h5')
-    dataset_path_test = os.path.join(data_base_folder, 'Card_pair_dataset_test.h5')
     if not os.path.isfile(dataset_path_train):
         raise FileNotFoundError(
             f"{dataset_path} not found. Please place the dataset in this directory.")
@@ -65,24 +64,18 @@ def run(
     with h5py.File(dataset_path_train, 'r') as dataset:
         images_pair_train = dataset['images'][:]
         factors_pair_train = dataset['labels'][:]
-        
-    with h5py.File(dataset_path_test, 'r') as dataset:
-        images_pair_test = dataset['images'][:]
-        factors_pair_test = dataset['labels'][:]
     print("LoveDA finish")
     
     print("dataset size:",images_pair_train.shape)
     print(factors_pair_train.shape)
 
     train_dataset = CardDataset(images_pair_train, factors_pair_train)
-    test_dataset = CardDataset(images_pair_test, factors_pair_test)
 
     device = TRAINING_PARAM["device"]
     learning_rate = TRAINING_PARAM["learning_rate"]
     epochs = TRAINING_PARAM["epochs"]
     trainer = SDIMTrainer(
         dataset_train=train_dataset,
-        dataset_test=test_dataset,
         model=sdim,
         loss=loss,
         learning_rate=learning_rate,

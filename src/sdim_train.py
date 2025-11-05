@@ -55,7 +55,7 @@ def run(
     )
 
     # Load data
-    dataset_path_train = os.path.join(data_base_folder, 'Card_pair_dataset_train_no_outlier.h5')
+    dataset_path_train = os.path.join(data_base_folder, 'Card_pair_dataset.h5')
     if not os.path.isfile(dataset_path_train):
         raise FileNotFoundError(
             f"{dataset_path} not found. Please place the dataset in this directory.")

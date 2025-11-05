@@ -14,7 +14,7 @@ data_base_folder="data"
 xp_name="Share_representation_training"
 conf_path="conf/share_conf.yaml"
 ```
-* data_base_folder : Is the folder where the raw mnist data is hosted. By default this folder is called "data" and the data is downloaded the first time this file is run.
+* data_base_folder : Is the folder where the Card dataset is located. By default this folder is called "data" and the data is downloaded the first time this file is run.
 
 * xp_name : Mlflow experimentation name.
 

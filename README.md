@@ -1,4 +1,4 @@
-# Learning Disentangled Representations via Mutual Information Estimation
+# Learning Disentangled Representations via Robust Optimal Transport
 
 **Pytorch** Implementation of **Learning Disentangled Representation via Robust Optimal Transport** 
 

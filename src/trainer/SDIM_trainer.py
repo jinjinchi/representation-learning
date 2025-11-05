@@ -155,7 +155,7 @@ class SDIMTrainer:
         self.optimizer_suit_classifier.step()
 
     def clone_sdim_outputs(self, sdim_outputs, weight_x_joint, weight_x_margin, weight_y_joint, weight_y_margin):
-        """克隆 sdim_outputs，除权重外全部 detach()"""
+        """Clone sdim_outputs and detach all components except the weights."""
         return SDIMOutputs(
             global_mutual_M_R_x=sdim_outputs.global_mutual_M_R_x.detach(),
             global_mutual_M_R_x_prime=sdim_outputs.global_mutual_M_R_x_prime.detach(),

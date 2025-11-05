@@ -48,7 +48,6 @@ class EDIMTrainer:
             model: EDIM,
             loss: EDIMLoss,
             dataset_train: Dataset,
-            dataset_test: Dataset,
             learning_rate: float,
             batch_size: int,
             device: str,
